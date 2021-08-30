@@ -1,0 +1,1 @@
+{"name":"Local: check_prime_efficient","url":"d:\\Codes\\dsa\\mathematics\\check_prime_efficient.cpp","tests":[{"id":1629300126308,"input":"67","output":""},{"id":1629300131347,"input":"35","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codes\\dsa\\mathematics\\check_prime_efficient.cpp","group":"local","local":true}

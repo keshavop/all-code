@@ -1,0 +1,1 @@
+{"name":"Local: computing_power_iterative","url":"d:\\Codes\\dsa\\mathematics\\computing_power_iterative.cpp","tests":[{"id":1629358597416,"input":"3 5","output":""},{"id":1629358694367,"input":"2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codes\\dsa\\mathematics\\computing_power_iterative.cpp","group":"local","local":true}

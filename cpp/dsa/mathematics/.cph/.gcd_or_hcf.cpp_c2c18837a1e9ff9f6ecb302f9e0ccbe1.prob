@@ -1,0 +1,1 @@
+{"name":"Local: gcd_or_hcf","url":"d:\\Codes\\dsa\\mathematics\\gcd_or_hcf.cpp","tests":[{"id":1629270886487,"input":"10 15","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codes\\dsa\\mathematics\\gcd_or_hcf.cpp","group":"local","local":true}

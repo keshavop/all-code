@@ -6,11 +6,13 @@ int reverse(int arr[],int n){
     int end=n-1;
     while (start<end)
     {
-        swap(arr[start],arr[end]);
+        //swap(arr[start],arr[end]);
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
         start++;
         end--;
     }
-    
 }
 
 int main()

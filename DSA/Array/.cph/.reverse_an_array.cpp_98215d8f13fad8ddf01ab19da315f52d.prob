@@ -1,0 +1,1 @@
+{"name":"Local: reverse_an_array","url":"d:\\Codes\\DSA\\Array\\reverse_an_array.cpp","tests":[{"id":1630336932253,"input":"5\n1 2 3 4 5","output":""},{"id":1630336949042,"input":"8\n8 7 6 5 4 3 2 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codes\\DSA\\Array\\reverse_an_array.cpp","group":"local","local":true}

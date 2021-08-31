@@ -9,7 +9,8 @@ int allPairs(int arr[],int n){
         {
             int y=arr[j];
 
-            cout<<x<<","<<y<<endl;
+            // cout<<x<<","<<y<<endl;
+            cout<<arr[i]<<","<<arr[j]<<endl;
         }
         cout<<endl;
     }

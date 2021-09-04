@@ -1,5 +1,4 @@
-#include <bits/stdc++.h> 
-#include<iostream> 
+#include <bits/stdc++.h>
 using namespace std;
 int sum(int n){
     if (n==0)

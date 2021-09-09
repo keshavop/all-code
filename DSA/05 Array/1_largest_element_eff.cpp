@@ -1,5 +1,4 @@
-#include <bits/stdc++.h> 
-#include<iostream> 
+#include <bits/stdc++.h>
 using namespace std;
 
 int getLargest(int arr[],int n){
@@ -10,8 +9,7 @@ int getLargest(int arr[],int n){
             res=i;
         }
     }
-        return res;
-    
+    return res;
 }
 
 int main(){
@@ -21,6 +19,6 @@ int main(){
     for (int i = 0; i < n; i++){
         cin>>arr[i];
     }
-    cout<<getLargest(arr,n);
+    cout<<" index is "<<getLargest(arr,n);
     return 0;
 }

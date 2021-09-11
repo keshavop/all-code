@@ -1,12 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-// Function to print the second
-// largest elements
 void print2largest(int arr[], int arr_size)
 {
 	int i, first, second;
-	// There should be atleast two elements
-	if (arr_size < 2)
+	if (arr_size < 2)						// There should be atleast two elements
 	{
 		cout << " Invalid Input ";
 		return;
@@ -15,21 +12,13 @@ void print2largest(int arr[], int arr_size)
 	first = second = INT_MIN;
 	for(i = 0; i < arr_size; i++)
 	{
-		
-	// If current element is greater
-	// than first then update both
-	// first and second
-	if (arr[i] > first)
-	{
-		second = first;
-		first = arr[i];
+	if (arr[i] > first){						// If current element is greater
+		second = first;							// than first then update both
+		first = arr[i];							// first and second
 	}
-		
-	// If arr[i] is in between first
-	// and second then update second
-	else if (arr[i] > second &&
-				arr[i] != first)
-	{
+	
+	else if (arr[i] > second && arr[i] != first)		// If arr[i] is in between first
+	{													// and second then update second
 		second = arr[i];
 	}
 	}
@@ -41,7 +30,6 @@ void print2largest(int arr[], int arr_size)
 			<< second;
 }
 
-// Driver code
 int main()
 {
 	int arr[] = { 12, 35, 1, 10, 99, 1 };
@@ -50,5 +38,3 @@ int main()
 	print2largest(arr, n);
 	return 0;
 }
-
-// This code is contributed by shivanisinghss2110

@@ -19,6 +19,6 @@ int main(){
     for (int i = 0; i < n; i++){
         cin>>arr[i];
     }
-    cout<<" index is "<<getLargest(arr,n);
+    cout<<"index is "<<getLargest(arr,n);
     return 0;
 }

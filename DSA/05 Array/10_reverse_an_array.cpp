@@ -15,14 +15,6 @@ void rev(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-
-    cout << endl;
-}
-
 int main()
 {
     int n;
@@ -32,8 +24,11 @@ int main()
     {
         cin >> arr[i];
     }
-    printArray(arr,n);
     rev(arr, n);
-    printArray(arr,n);
+    for (int j = 0; j < n; j++)
+    {
+        cout << arr[j] << " ";
+    }
+
     return 0;
 }

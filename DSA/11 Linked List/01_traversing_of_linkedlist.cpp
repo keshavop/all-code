@@ -11,25 +11,35 @@ using namespace std;
 //         next = NULL;
 //     }
 // };
+
+// void print(node *head)
+// {
+//     node *curr = head;
+//     while (curr != NULL)
+//     {
+//         cout << (curr->data) << " ";
+//         curr = curr->next;
+//     }
+// }
+
 class node
 {
-    public:
+public:
     int data;
     node *next;
-    node(int x)
+    node(int d)
     {
-        data = x;
+        data = d;
         next = NULL;
     }
 };
 
-void printlist(node *head)
+void print(node *head)
 {
-    node *curr = head;
-    while (curr != NULL)
+    while (head != NULL)
     {
-        cout << (curr->data) << " ";
-        curr = curr->next;
+        cout << head->data << " ";
+        head = head->next;
     }
 }
 
@@ -40,6 +50,6 @@ int main()
     head->next->next = new node(30);
     head->next->next->next = new node(40);
 
-    printlist(head);
+    print(head);
     return 0;
 }

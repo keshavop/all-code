@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class node
-{
+class node{
 public:
     int data;
     node *next;
@@ -13,10 +12,7 @@ public:
     }
 };
 
-
-
-node *insertEnd(node *head, int d)
-{
+node *insertEnd(node *head, int d){
     node *temp = new node(d);
     if (head == NULL)
         return temp;
@@ -29,8 +25,7 @@ node *insertEnd(node *head, int d)
     curr->next = temp;
 }
 
-void print(node *head)
-{
+void print(node *head){
     while (head != NULL)
     {
         cout << head->data << " ";
@@ -38,8 +33,7 @@ void print(node *head)
     }
 }
 
-int main()
-{
+int main(){
     node *head = NULL;
     head = insertEnd(head, 10);
     head = insertEnd(head, 20);

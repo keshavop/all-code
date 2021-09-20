@@ -5,8 +5,8 @@ class node
 {
 public:
     int data;
-    node *next = NULL;
-    node *prev = NULL;
+    node *next;
+    node *prev;
     node(int d)
     {
         data = d;
@@ -22,30 +22,28 @@ void print(node *head)
         cout << head->data << " ";
         head = head->next;
     }
+    cout << endl;
 }
 
-node*insertENd(node *head, int x)
+node *insertBegin(node *head, int x)
 {
     node *temp = new node(x);
-    if (head == NULL)
+    temp->next = head;
+    if (head != NULL)
     {
-        return temp;
+        head->prev = temp;
     }
-    node *curr = head;
-    while (curr->next != NULL)
-    {
-        curr = curr->next;
-    }
-    curr->next = temp;
-    temp->prev = curr;
-    return head;
+    return temp;
 }
 
 int main()
 {
-    node*head=NULL;
-    head=insertENd(head,10);
-    head=insertENd(head,20);
+    node *head = new node(10);
+    node *temp1 = new node(21);
+    head->next = temp1;
+    temp1->prev = head;
+    print(head);
+    head = insertBegin(head, 5);
     print(head);
     return 0;
 }

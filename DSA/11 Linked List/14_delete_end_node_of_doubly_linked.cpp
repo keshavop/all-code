@@ -22,7 +22,7 @@ void print(node*head){
     cout<<endl;
 }
 
-node*deleteHead(node*head){
+node*deleteEnd(node*head){
     if (head==NULL)
     {
         return NULL;
@@ -32,14 +32,14 @@ node*deleteHead(node*head){
         delete head;
         return NULL;
     }
-    else
-    {
-        node*temp=head;
-        head=head->next;
-        head->prev=NULL;
-        delete temp;
+        node*curr=head;
+        while (curr->next!=NULL)
+        {
+            curr=curr->next;
+        }
+        curr->prev->next=NULL;
+        delete curr;
         return head;
-    }
 }
 
 int main()
@@ -55,7 +55,7 @@ int main()
     temp2->next=temp3;
     temp3->prev=temp2;
     print(head);
-    head=deleteHead(head);
+    head=deleteEnd(head);
     print(head);
     return 0;
 }

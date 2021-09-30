@@ -5,4 +5,4 @@ end=2700+1
 
 for i in range(start,end):
     if i%7==0 and i%5==0:
-        print(i,end=",")
+        print(i,end=", ")

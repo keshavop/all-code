@@ -38,8 +38,8 @@ bool isBalanced(string str)
 
 int main()
 {
-    // string str = "{()}[]";
-    string str = "{[()]}";
+    string str = "{()}]";
+    // string str = "{[()]}";
     if (isBalanced(str))
         cout << "Balanced";
     else

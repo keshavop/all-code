@@ -19,7 +19,7 @@ int main()
 {
     int n = 7;
     int arr[] = {2, 4, 6, 80, 10, 10, 10};
-    n=duplicate(arr, n);
+    n = duplicate(arr, n);
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

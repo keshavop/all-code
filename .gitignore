@@ -3,5 +3,11 @@ web/
 Hacktoberfest/
 Project/
 Dart/
+.vscode/
+
+
+
+
+
 *.bin
 *.prob

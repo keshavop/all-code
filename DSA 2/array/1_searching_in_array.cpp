@@ -10,15 +10,15 @@ int search(int arr[], int n, int x)
             cout << "Found";
         }
     }
-    // return -1;
-    cout<<"Not found";
+    return -1;
+    // cout<<"Not found";
 }
 
 int main()
 {
     int n, x;
     cin >> n >> x;
-    int arr[n];
+    int arr[1000];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];

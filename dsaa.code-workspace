@@ -7,5 +7,9 @@
 			"path": "DSA 2"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
 }

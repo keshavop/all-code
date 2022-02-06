@@ -18,20 +18,28 @@ int insert(int arr[], int n, int x, int pos)
     return n + 1;
 }
 
-int main()
+void printArray(int arr[], int n)
 {
-    int n, x, pos;
-    cin >> n >> x >> pos;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    cout << insert(arr, n, x, pos) << endl;
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
+}
 
+int main()
+{
+    int n, x, pos;
+    cin >> n >> x >> pos;
+    int arr[1000];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    n = insert(arr, n, x, pos);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    printArray(arr, n);
     return 0;
 }

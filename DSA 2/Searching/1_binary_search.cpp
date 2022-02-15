@@ -1,4 +1,5 @@
 // Binary Search
+// iterative
 
 #include <iostream>
 using namespace std;

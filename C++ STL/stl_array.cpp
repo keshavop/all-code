@@ -6,12 +6,12 @@ int main()
 {
     array<int, 5> arr;
 
-    //fill func is used to initialise whole array with 10
+    // fill func is used to initialise whole array with 10
     arr.fill(10); //{10,10,10,10,10}
 
-    arr.at(0); //pointing at arr[0]
+    arr.at(0); // pointing at arr[0]
 
-    for (int i = 0; i < 5; i++) //printing array
+    for (int i = 0; i < 5; i++) // printing array
     {
         cout << arr.at(i) << " ";
     }
@@ -21,6 +21,6 @@ int main()
     {
         cout << *it << " ";
     }
-    
+
     return 0;
 }

@@ -1,10 +1,8 @@
-from importlib.abc import SourceLoader
-import pyautogui 
+import pyautogui
 import time
 
-text=[]
-# text=[]
+msg=""""""
+
+
 time.sleep(4)
-for i in range(21):
-    pyautogui.typewrite(text[i])
-    pyautogui.typewrite("\n")
+pyautogui.write(msg,0)

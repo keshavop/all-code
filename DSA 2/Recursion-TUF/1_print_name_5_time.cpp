@@ -1,7 +1,7 @@
 // Print name 5 time using recursion
 
-//Time  -> 0(n)
-//Space -> 0(n)
+// Time  -> 0(n)
+// Space -> 0(n)
 
 #include <iostream>
 using namespace std;
@@ -19,7 +19,7 @@ int print(int i, int n)
 
 int main()
 {
-    int i = 0;
+    int i = 1;
     int n = 5;
     print(i, n);
     return 0;

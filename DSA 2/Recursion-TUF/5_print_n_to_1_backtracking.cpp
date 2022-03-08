@@ -1,4 +1,4 @@
-// Print name 1 to n time using recursion
+// Print name n to 1 using backtracking recursion
 
 // Time  -> 0(n)
 // Space -> 0(n)
@@ -8,19 +8,18 @@ using namespace std;
 
 int print(int i, int n)
 {
-    if (i > n)
+    if (i < n)
     {
         return -1;
     }
+    print(i - 1, n);
     cout << i << " ";
-    i++;
-    print(i, n);
 }
 
 int main()
 {
-    int i = 1;
-    int n = 10;
+    int i = 10;
+    int n = 1;
     print(i, n);
 
     return 0;

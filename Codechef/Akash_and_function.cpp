@@ -9,19 +9,14 @@ int main()
     {
         int n;
         cin >> n;
-        int num;
-        num = n % 7;
+        int num = n % 2;
         if (num == 0)
         {
-            cout << n / 7 << endl;
-        }
-        else if (num >= 6)
-        {
-            cout << n / 7 + 1 << endl;
+            cout << n / 2 << endl;
         }
         else
         {
-            cout << n / 7 << endl;
+            cout << n / 2 + 1 << endl;
         }
     }
 

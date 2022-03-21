@@ -20,7 +20,7 @@ int main()
 {
     int n = 9;
     int x = 67;
-    int arr[] = {1, 10, 10, 13, 16, 19, 67, 45, 56};
+    int arr[] = {1, 10, 10, 13, 16, 19, 67, 45, 67, 56};
     cout << first_occur(arr, n, x);
     return 0;
 }

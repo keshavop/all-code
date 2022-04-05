@@ -5,10 +5,10 @@
 
 # 2. Largest element in array
 ## -> Naive
-<img src="img/2.png">
+<img src="img/2.1.png">
 
 ## -> Efficient
-<img src="img/3.png">
+<img src="img/2.2.png">
 
 # 3
 

@@ -1,3 +1,8 @@
+// largest element in array
+
+// Time  -> 0(n)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 

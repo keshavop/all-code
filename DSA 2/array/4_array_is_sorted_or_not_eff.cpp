@@ -1,3 +1,8 @@
+// array is sorted or not eff
+
+// Time  -> 0(n)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 

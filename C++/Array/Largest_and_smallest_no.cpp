@@ -16,13 +16,8 @@ Sample Output
 
 4 1
 
-
-
 Explanation :
-
-for test case one, largestElement is 9 & smallestElement is 0
-
-Similarly for test case two, largestElement is 4 & smallestElement is 1.
+for test case one, largestElement is 9 & smallestElement is 0 Similarly for test case two, largestElement is 4 & smallestElement is 1.
 */
 
 #include <iostream>

@@ -1,147 +1,140 @@
-// // Copyright 2019 the Dart project authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license
-// that can be found in the LICENSE file.
-
-import 'dart:math' as math;
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Colors.orange;
-const TargetPlatform platform = TargetPlatform.android;
-
-void main() {
-  runApp(Sunflower());
-}
-
-class SunflowerPainter extends CustomPainter {
-  static const seedRadius = 2.0;
-  static const scaleFactor = 4;
-  static const tau = math.pi * 2;
-
-  static final phi = (math.sqrt(5) + 1) / 2;
-
-  final int seeds;
-
-  SunflowerPainter(this.seeds);
+class HelicopterPage extends StatefulWidget {
+  const HelicopterPage({Key? key}) : super(key: key);
 
   @override
-  void paint(Canvas canvas, Size size) {
-    final center = size.width / 2;
+  _HelicopterPageState createState() => _HelicopterPageState();
+}
 
-    for (var i = 0; i < seeds; i++) {
-      final theta = i * tau / phi;
-      final r = math.sqrt(i) * scaleFactor;
-      final x = center + r * math.cos(theta);
-      final y = center - r * math.sin(theta);
-      final offset = Offset(x, y);
-      if (!size.contains(offset)) {
-        continue;
-      }
-      drawSeed(canvas, x, y);
+class _HelicopterPageState extends State<HelicopterPage> {
+  List<dynamic> _helicopters = [
+    {
+      'color': Color(0xff2DAAFA),
+      'image':
+          'https://cdn.dribbble.com/users/4584084/screenshots/9271491/media/f32107904c73530191707403fa4fa6ea.gif',
+    },
+    {
+      'color': Color(0xffE7CB91),
+      'image':
+          'https://cdn.dribbble.com/users/721278/screenshots/6274521/helicopter_toy.gif',
+    },
+    {
+      'color': Color(0xff731A01),
+      'image':
+          'https://cdn.dribbble.com/users/210956/screenshots/3829094/media/3b6073f14271b5f7f809f34b468ae07c.gif',
     }
-  }
+  ];
 
-  @override
-  bool shouldRepaint(SunflowerPainter oldDelegate) {
-    return oldDelegate.seeds != seeds;
-  }
+  int _current = 0;
+  dynamic _selectedIndex = {};
 
-  // Draw a small circle representing a seed centered at (x,y).
-  void drawSeed(Canvas canvas, double x, double y) {
-    final paint = Paint()
-      ..strokeWidth = 2
-      ..style = PaintingStyle.fill
-      ..color = primaryColor;
-    canvas.drawCircle(Offset(x, y), seedRadius, paint);
-  }
-}
-
-class Sunflower extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _SunflowerState();
-  }
-}
-
-class _SunflowerState extends State<Sunflower> {
-  double seeds = 100.0;
-
-  int get seedCount => seeds.floor();
+  CarouselController _carouselController = new CarouselController();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData().copyWith(
-        platform: platform,
-        brightness: Brightness.dark,
-        sliderTheme: SliderThemeData.fromPrimaryColors(
-          primaryColor: primaryColor,
-          primaryColorLight: primaryColor,
-          primaryColorDark: primaryColor,
-          valueIndicatorTextStyle: const DefaultTextStyle.fallback().style,
-        ),
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Sunflower"),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: const [
-              DrawerHeader(
-                child: Center(
-                  child: Text(
-                    "Sunflower 🌻",
-                    style: TextStyle(fontSize: 32),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        body: Container(
-          constraints: const BoxConstraints.expand(),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.transparent,
-            ),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.transparent,
-                  ),
-                ),
-                child: SizedBox(
-                  width: 400,
-                  height: 400,
-                  child: CustomPaint(
-                    painter: SunflowerPainter(seedCount),
-                  ),
-                ),
-              ),
-              Text("Showing $seedCount seeds"),
-              ConstrainedBox(
-                constraints: const BoxConstraints.tightFor(width: 300),
-                child: Slider.adaptive(
-                  min: 20,
-                  max: 2000,
-                  value: seeds,
-                  onChanged: (newValue) {
-                    setState(() {
-                      seeds = newValue;
-                    });
-                  },
-                ),
-              ),
-            ],
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: Text(
+          '@theflutterlover',
+          style: TextStyle(
+            color: Colors.black,
           ),
         ),
       ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: CarouselSlider(
+            carouselController: _carouselController,
+            options: CarouselOptions(
+                height: 250.0,
+                aspectRatio: 4 / 3,
+                // viewportFraction: 0.70,
+                // enlargeCenterPage: true,
+                pageSnapping: true,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
+            items: _helicopters.map((helicopter) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return GestureDetector(
+                    onTap: () {
+                      // go to product view page with navigation push
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => HelicopterView(
+                            helicopter: helicopter,
+                          ),
+                        ),
+                      );
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      width: MediaQuery.of(context).size.width,
+                      margin: EdgeInsets.symmetric(horizontal: 10.0),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.withOpacity(0.2),
+                                blurRadius: 20,
+                                offset: Offset(0, 5))
+                          ]),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Hero(
+                              transitionOnUserGestures: true,
+                              tag: helicopter['color'],
+                              child: Container(
+                                height: 250,
+                                // margin: EdgeInsets.only(top: 15),
+                                clipBehavior: Clip.hardEdge,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Image.network(helicopter['image'],
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            }).toList()),
+      ),
+    );
+  }
+}
+
+class HelicopterView extends StatefulWidget {
+  final dynamic helicopter;
+  const HelicopterView({Key? key, required this.helicopter}) : super(key: key);
+
+  @override
+  _HelicopterViewState createState() => _HelicopterViewState();
+}
+
+class _HelicopterViewState extends State<HelicopterView> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: widget.helicopter['color'],
+      child: Hero(
+          tag: widget.helicopter['color'],
+          transitionOnUserGestures: true,
+          child: Image.network(widget.helicopter['image'])),
     );
   }
 }

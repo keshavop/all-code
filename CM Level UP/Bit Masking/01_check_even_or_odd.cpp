@@ -1,3 +1,5 @@
+// number & with 1 tell us number is odd and & with 0 tell us number is even.
+
 #include <iostream>
 using namespace std;
 

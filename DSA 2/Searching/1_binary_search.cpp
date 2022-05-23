@@ -1,5 +1,6 @@
 // Binary Search
 // iterative
+// Time -> 0(Logn)
 
 #include <iostream>
 using namespace std;

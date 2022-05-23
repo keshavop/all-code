@@ -8,7 +8,7 @@ using namespace std;
 int largest_subarray_sum3(int arr[], int n)
 {
     int cs = 0;
-    int largest_sum = arr[0];
+    int largest_sum = 0;
     for (int i = 0; i < n; i++)
     {
         cs = cs + arr[i];

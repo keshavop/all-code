@@ -1,6 +1,7 @@
-// index of element first occurence
+// index of element first occurence naive
 // time -> O(n) Big O
 // space -> O(1)
+
 #include <iostream>
 using namespace std;
 

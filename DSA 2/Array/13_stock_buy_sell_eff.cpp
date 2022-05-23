@@ -6,7 +6,7 @@ using namespace std;
 int maxProfit(int price[], int n)
 {
     int profit = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         if (price[i] > price[i - 1])
         {
@@ -18,7 +18,7 @@ int maxProfit(int price[], int n)
 
 int main()
 {
-    int arr[] = {1, 5, 3, 8, 12}, n = 5;
+    int arr[] = {7,1,5,3,6,4}, n = 6;
 
     cout << maxProfit(arr, n);
 }

@@ -1,9 +1,9 @@
-let age=21;
+let age;
 
-if(age>=18){
+// age = prompt("Enter age");
+
+if (age >= 18) {
     console.log("You can vote");
+} else {
+    console.log("kal ana hee heee");
 }
-else{
-    console.log("kal ana hee heee")
-}
-

@@ -1,4 +1,4 @@
-let age;
+let age=97;
 
 // age = prompt("Enter age");
 

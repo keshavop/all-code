@@ -12,7 +12,7 @@ public:
         while (low <= high)
         {
             long long int mid = (low + high) / 2;
-            long int msq = mid * mid;
+            long long int msq = mid * mid;
             if (msq == N)
             {
                 return mid;

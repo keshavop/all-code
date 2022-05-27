@@ -1,6 +1,6 @@
-let age=97;
+let age;
 
-// age = prompt("Enter age");
+age = prompt("Enter age");
 
 if (age >= 18) {
     console.log("You can vote");

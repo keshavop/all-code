@@ -26,3 +26,15 @@ const math1 = {
 
 console.log(math1.add(2, 3));
 console.log(math1.multiply(2, 3));
+
+
+// this keyword
+const Person={
+    firstName:'Keshav',
+    lastName:'Kumar',
+    name(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+console.log(Person.name());

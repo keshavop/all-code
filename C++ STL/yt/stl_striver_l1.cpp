@@ -51,7 +51,7 @@ int main() {
 	raj.num = 79; 
 	raj.doub = 91.0; 
 
-	node raj = new node("striver", 79, 91.0, ""); 
+	node *raj = new node("striver", 79, 91.0, ""); 
 
 
 	{arr[], int, double}; 

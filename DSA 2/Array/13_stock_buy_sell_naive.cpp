@@ -29,7 +29,7 @@ int maxProfit(int price[], int start, int end)
 int main()
 {
 
-    int arr[] = {1, 5, 3, 8, 12}, n = 5;
+    int arr[] = {7,1,5,3,6,4}, n = 6;
 
     cout << maxProfit(arr, 0, n - 1);
 }

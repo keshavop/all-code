@@ -1,17 +1,21 @@
-#include <bits/stdc++.h> 
-#include<iostream> 
+#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int secondLargest(int arr[],int n){
-    int res=-1,largest=0;
+int secondLargest(int arr[], int n)
+{
+    int res = -1, largest = 0;
     for (int i = 0; i < n; i++)
     {
-        if(arr[i]>arr[largest]){
-            res=largest;
-            largest=i;
+        if (arr[i] > arr[largest])
+        {
+            res = largest;
+            largest = i;
         }
-        else if(arr[i]=arr[largest]){
-            if(res==-1 || arr[i]>arr[res]){
+        else if (arr[i] = arr[largest])
+        {
+            if (res == -1 || arr[i] > arr[res])
+            {
                 res = i;
             }
         }
@@ -19,13 +23,15 @@ int secondLargest(int arr[],int n){
     return res;
 }
 
-int main(){
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
     int arr[n];
-    for (int i = 0; i < n; i++){
-        cin>>arr[i];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
     }
-    cout<<secondLargest(arr,n);
+    cout << secondLargest(arr, n);
     return 0;
 }

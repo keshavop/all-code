@@ -1,8 +1,12 @@
 // Left rotate array by one
+
+// Time  -> 0(n)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 
-int leftRotate(int arr[], int n) //Time  ->  o(n)
+int leftRotate(int arr[], int n) // Time  ->  o(n)
 {
     int temp = arr[0];
     for (int i = 1; i < n; i++)

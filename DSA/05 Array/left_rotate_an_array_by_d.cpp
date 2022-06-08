@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void reverse(int arr[], int low=0, int high=0)
+void reverse(int arr[], int low = 0, int high = 0)
 {
     while (low < high)
     {
@@ -30,8 +30,8 @@ void printArray(int arr[], int n)
 int main()
 {
     int arr[] = {1, 2, 3, 4, 5};
-//    int n = sizeof(arr) / sizeof(arr[0]);
-	int n=5;
+    //    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = 5;
     int d = 2;
     leftRotate(arr, n, d);
     printArray(arr, n);

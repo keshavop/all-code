@@ -14,7 +14,7 @@ int leaders(int arr[], int n)   //time -> o(n^2)
         for (int j = i + 1; j < n; j++)
         {
             if (arr[j] >= arr[i])
-            {
+            {+
                 flag = true;
                 break;
             }

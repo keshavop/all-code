@@ -1,6 +1,9 @@
 // max difference between max min eff
 // arr[next] - arr[prev]
 
+// Time  -> 0(n)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 

@@ -3,6 +3,9 @@
 // rightmost element is alwas a leader
 // if ements are sorted in decreasing order than all elements are leader
 
+// Time  -> 0(n^2)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 

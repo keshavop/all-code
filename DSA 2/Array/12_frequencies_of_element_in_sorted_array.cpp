@@ -1,5 +1,8 @@
 // frequencies in sorted array
 
+// Time  -> 0(n)
+// Space -> 0(1)
+
 #include <iostream>     //Time -> theta n
 using namespace std;
 

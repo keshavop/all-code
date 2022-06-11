@@ -1,4 +1,8 @@
 // Stock buy and sell eff
+// if prices is increasing we add up 
+
+// Time  -> 0(n)
+// Space -> 0(1)
 
 #include <iostream>
 using namespace std;

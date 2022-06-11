@@ -1,5 +1,8 @@
 // Stock buy and sell naive
 
+// Time  -> 0(n^2)
+// Space -> 0(1)
+
 #include <iostream>
 using namespace std;
 

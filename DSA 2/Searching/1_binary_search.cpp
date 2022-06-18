@@ -27,7 +27,7 @@ int binary_search(int arr[],int n,int x){
 int main()
 {
     int n=6;
-    int x=50;
+    int x=5;
     int arr[]={3,5,7,8,9,0};
     cout<<binary_search(arr,n,x);
     return 0;

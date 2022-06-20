@@ -1,5 +1,7 @@
 // printing freq of char in string
 
+// Time -> O(n)
+
 #include <iostream>
 using namespace std;
 

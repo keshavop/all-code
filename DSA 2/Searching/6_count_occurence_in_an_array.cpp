@@ -4,11 +4,29 @@ using namespace std;
 
 int firstOccurence(int arr[], int n, int x)
 {
-    for (int i = 0; i < n; i++)
+    int low = 0;
+    int high = n - 1;
+    while (low <= high)
     {
-        if (arr[i] == x)
+        int mid = (low + high) / 2;
+        if (arr[mid] > x)
         {
-            return i;
+            high = mid - 1;
+        }
+        else if (arr[mid] < x)
+        {
+            low = mid + 1;
+        }
+        else
+        {
+            if (mid == 0 || arr[mid - 1] != arr[mid])
+            {
+                return mid;
+            }
+            else
+            {
+                high = mid - 1;
+            }
         }
     }
     return -1;

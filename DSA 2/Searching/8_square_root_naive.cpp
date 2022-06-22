@@ -1,3 +1,9 @@
+// square root naive
+
+// Time -> 0(n)
+// Space -> 0(1)
+
+
 #include <bits/stdc++.h>
 using namespace std;
 

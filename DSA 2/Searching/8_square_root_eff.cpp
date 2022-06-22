@@ -1,3 +1,9 @@
+// square root eff
+
+// Time -> 0(Logn)
+// Space -> 0(1)
+
+
 #include <bits/stdc++.h>
 using namespace std;
 

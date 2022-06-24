@@ -15,7 +15,7 @@ int peakElement(vector<int> nums)
     while (low<high)
     {
         int mid = (low + high)/2;
-        if(mid ==0 && arr[mid-1])
+        // if(mid ==0 && [mid-1])
     }
     
     return -1;

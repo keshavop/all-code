@@ -1,1 +1,0 @@
-{"name":"Local: binary_search","url":"d:\\Codes\\DSA\\Array\\binary_search.cpp","tests":[{"id":1630336432192,"input":"7 10\n1 2 10 11 19 20 30","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codes\\DSA\\Array\\binary_search.cpp","group":"local","local":true}

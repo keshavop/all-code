@@ -8,6 +8,6 @@ int rep(){
 
 int main()
 {
-    
+    vector<int> nums{}
     return 0;
 }

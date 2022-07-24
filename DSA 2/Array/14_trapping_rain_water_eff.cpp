@@ -47,7 +47,6 @@
 //     return 0;
 // }
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -78,24 +77,22 @@ int findWater(int arr[], int n)
 	// consider the amount of water on i'th bar, the
 	// amount of water accumulated on this particular
 	// bar will be equal to min(left[i], right[i]) - arr[i] .
-	for (int i = 1; i < n-1; i++)
+	for (int i = 1; i < n - 1; i++)
 	{
-	int var=min(left[i-1],right[i+1]);
-	if(var > arr[i])
-	{
-		water += var - arr[i];
+		int var = min(left[i - 1], right[i + 1]);
+		if (var > arr[i])
+		{
+			water = water + var - arr[i];
+		}
 	}
-	}
-		
 
 	return water;
 }
 
 int main()
 {
-	int arr[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+	int arr[] = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
 	int n = sizeof(arr) / sizeof(arr[0]);
-	cout << "Maximum water that can be accumulated is "
-		<< findWater(arr, n);
+	cout << "Maximum water that can be accumulated is " << findWater(arr, n);
 	return 0;
 }

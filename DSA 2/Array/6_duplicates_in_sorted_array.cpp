@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-int removeDuplicate(int arr[], int n)   //Time  ->  o(n)
+int removeDuplicate(int arr[], int n) // Time  ->  o(n)
 {
     int res = 1;
     for (int i = 1; i < n; i++)
@@ -22,8 +22,8 @@ int removeDuplicate(int arr[], int n)   //Time  ->  o(n)
 
 int main()
 {
-    int n = 5;
-    int arr[5] = {10, 20, 20, 10, 30};
+    int n = 6;
+    int arr[6] = {10, 20, 40, 20, 10, 30};
 
     n = removeDuplicate(arr, n);
 

@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 
-
 // class Solution
 // {
 // public:
@@ -19,7 +18,6 @@ using namespace std;
 //         return {};
 //     }
 // };
-
 
 vector<int> twoSum(vector<int> &nums, int target)
 {

@@ -14,7 +14,7 @@ public:
     }
 };
 
-void printList(node *head)
+void printList(node *head)      //print the list
 {
     while (head != NULL)
     {
@@ -25,17 +25,17 @@ void printList(node *head)
 
 node *sortedMerge(node *a, node *b)
 {
-    if (a == NULL)
+    if (a == NULL)      //if a is empty then return b
     {
         return b;
     }
-    if (b == NULL)
+    if (b == NULL)      // if b is empty then return a
     {
         return a;
     }
-    node *head = NULL;
+    node *head = NULL;  // head and tail both are req so that addn is siplified
     node *tail = NULL;
-    if (a->data <= b->data)
+    if (a->data <= b->data)     // to choose head and tail in list
     {
         head = tail = a;
         a = a->next;
@@ -46,7 +46,7 @@ node *sortedMerge(node *a, node *b)
         b = b->next;
     }
 
-    while (a != NULL && b != NULL)
+    while (a != NULL && b != NULL)  // traversing list and mergeing smallest node
     {
         if (a->data <= b->data)
         {
@@ -61,7 +61,7 @@ node *sortedMerge(node *a, node *b)
             b = b->next;
         }
     }
-    if (a == NULL)
+    if (a == NULL)  // if one list become empty
     {
         tail->next = b;
     }

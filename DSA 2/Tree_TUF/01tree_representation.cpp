@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+// struct declaration
 struct Node
 {
     int data;
@@ -15,6 +16,17 @@ struct Node
     }
 };
 
+// class declaration
+class Node{
+    public:
+    int data;
+    Node * left;
+    Node * right;
+    Node(int d){
+        data = d;
+        left = right = NULL;
+    }
+};
 
 int main()
 {

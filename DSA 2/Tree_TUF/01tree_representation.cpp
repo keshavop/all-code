@@ -5,16 +5,16 @@
 using namespace std;
 
 // struct declaration
-struct Node
-{
-    int data;
-    Node*left;
-    Node*right;
-    Node(int val){
-        data = val;
-        left=right=NULL;
-    }
-};
+// struct Node
+// {
+//     int data;
+//     Node*left;
+//     Node*right;
+//     Node(int val){
+//         data = val;
+//         left=right=NULL;
+//     }
+// };
 
 // class declaration
 class Node{
